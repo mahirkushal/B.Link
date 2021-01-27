@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <title>TaskB</title>
+  <style>
+      * {
+          font=size:30px;
+      }
+  </style>
+</head>
+
+<body>
+ <div class="login">
+
+     <!-- Main Input For Time Delta -->
+    <form action="{{ url_for('time_difference')}}"method="post">
+    	<input type="text" name="input t1" placeholder="enter t1" required="required" />
+        <input type="text" name="input t2" placeholder="enter t2" required="required" />
+        <button type="submit" class="btn btn-primary btn-block btn-large">Calculate</button>
+    </form>
+
+   <br>
+   <br>
+   <br>
+   {{ difference }}
+
+ </div>
+
+
+</body>
+</html>
